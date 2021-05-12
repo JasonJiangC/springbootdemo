@@ -19,7 +19,7 @@
 		<java.version>1.8</java.version>
 <!--		<spring.cloud-version>2020.0.0</spring.cloud-version>-->
 		<spring.cloud-version>Hoxton.SR9</spring.cloud-version>
-		<spring-cloud-alibaba.version>2.1.2.RELEASE</spring-cloud-alibaba.version>
+		<spring-cloud-alibaba.version>2.2.2.RELEASE</spring-cloud-alibaba.version>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
@@ -36,6 +36,23 @@
 				<version>${spring-cloud-alibaba.version}</version>
 				<type>pom</type>
 				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>com.baomidou</groupId>
+				<artifactId>mybatis-plus-core</artifactId>
+				<version>3.2.0</version>
+				<scope>compile</scope>
+			</dependency>
+			<dependency>
+				<groupId>com.baomidou</groupId>
+				<artifactId>mybatis-plus-extension</artifactId>
+				<version>3.2.0</version>
+				<scope>compile</scope>
+			</dependency>
+			<dependency>
+				<groupId>com.baomidou</groupId>
+				<artifactId>mybatis-plus-boot-starter</artifactId>
+				<version>3.2.0</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
@@ -57,7 +74,17 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.16.20</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.48</version>
+		</dependency>
 	</dependencies>
 
 	<!--<build>
