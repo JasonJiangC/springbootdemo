@@ -18,7 +18,6 @@ import lombok.experimental.Accessors;
 public class Test1 {
 
 
-    private Integer id;
     private String name;
 
 

@@ -19,7 +19,6 @@ import lombok.experimental.Accessors;
 @TableName("test")
 public class Test {
 
-    private Integer id;
 
     private String des;
 

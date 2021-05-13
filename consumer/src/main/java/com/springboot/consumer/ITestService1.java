@@ -11,5 +11,8 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @since 2021-05-12
  */
 public interface ITestService1 extends IService<Test> {
-
+    /**
+     * a
+     */
+    void create(Integer a) throws Exception;
 }

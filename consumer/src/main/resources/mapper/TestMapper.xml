@@ -4,8 +4,9 @@
 
     <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="com.springboot.consumer.Test">
-    <result column="id" property="id" />
         <result column="des" property="des" />
     </resultMap>
-
+    <insert id="create" >
+        insert into `test`(`des`) values (#{des});
+    </insert>
 </mapper>
