@@ -17,11 +17,12 @@ import org.springframework.stereotype.Service;
 public class Test1ServiceImpl extends ServiceImpl<Test1Mapper, Test1> implements ITest1Service {
 
     @Override
-    @GlobalTransactional(rollbackFor = Exception.class)
+//    @GlobalTransactional(rollbackFor = Exception.class)
     public void create() throws Exception {
         Test1 test1 = new Test1();
         test1.setName("tel2");
         this.save(test1);
-//        throw new Exception("provider执行失败！！");
+        Thread.sleep(10000);
+        throw new Exception("provider执行失败！！");
     }
 }
